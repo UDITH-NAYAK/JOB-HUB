@@ -11,8 +11,8 @@
          </div>
       </div>
       <!-- search bar -->
-      <form action="/search" method="get" class="w-full">
-         <div class=" w-full md:w-.5 flex ml-80">
+      <form action="/search" method="get" class="w-full  pl-80 ">
+      <div class=" w-full md:w-.5 flex mx-auto ">
             <input type="search" name="search" 
                class="block w-7/12   px-4 py-2 pl-10 pr-4 leading-normal text-gray-900 bg-white border border-gray-300 rounded-lg appearance-none hover:border-gray-700 focus:outline-none focus:ring-2 
                focus:ring-blue-600 ">
@@ -196,5 +196,5 @@
       </div>
    </body>
   
-</x-layput>
+</x-layout>
 </html>

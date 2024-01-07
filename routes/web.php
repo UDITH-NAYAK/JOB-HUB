@@ -19,6 +19,12 @@ use App\Http\Controllers\JobController;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/login', function () {
+    return view('partials.login');
+});
+Route::get('/register', function () {
+    return view('partials.registration');
+});
 
  Route::get('/job/post',[JobController::class,'showPostPage']);
  Route::post('/job/create',[JobController::class,'createJob']);
