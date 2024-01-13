@@ -15,13 +15,16 @@ class Jobpost extends Migration
     {
         Schema::create('job_posts',function(Blueprint $table){
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('company');
             $table->string('title');
+            $table->string('logo')->nullable();
             $table->string('experience');
             $table->string('salary');
             $table->string('skills');
             $table->string('location');
-            $table->string('description');
+            $table->string('job_link');
+            $table->text('description');
             $table->timestamps();
 
         });

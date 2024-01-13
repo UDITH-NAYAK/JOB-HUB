@@ -10,17 +10,16 @@
 <body class="font-sans bg-gradient-to-t from-purple-300  via-gray-200 to-purple-300">
     <x-navbar/>
 
-
     <!-- Content -->
     <div class="container mx-auto mt-20">
         <div class=" max-h-xl flex items-center justify-center ">
             <div class="max-w-xl max-h-xl  w-full p-6 bg-white rounded-md shadow-md">
-                <h1 class="text-4xl font-extrabold text-center text-indigo-600 mb-4">Welcome to JonPost</h1>
+                <h1 class="text-4xl font-extrabold text-center text-indigo-600 mb-4">Welcome to JobPost</h1>
                 <p class="text-lg text-gray-600 text-center mb-8">Find the job that suits you!</p>
     
-                <form action="" method="POST" class="space-y-4">
+                <form action="/user/authenticate" method="POST" class="space-y-4">
                     @csrf
-    
+                        
                     <div class="mb-4">
                         <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                         <input
@@ -32,6 +31,10 @@
                             required
                             autofocus
                         />
+
+                        @error('email')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }} </p>
+                    @enderror
                     </div>
     
                     <div class="mb-4">
@@ -43,6 +46,9 @@
                             class="mt-1 p-3 w-full border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
                             required
                         />
+                        @error('password')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }} </p>
+                    @enderror
                     </div>
     
                     <div class="flex items-center justify-between mb-4">
