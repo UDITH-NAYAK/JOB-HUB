@@ -61,8 +61,8 @@
                     </div>
                     <div class="flex items-center justify-between mb-4">
 
-                        <a href=" " class="text-sm text-indigo-600 hover:underline">
-                            Forgot your password?
+                        <a href="/login" class="text-sm text-indigo-600 hover:underline">
+                            Already have a account?
                         </a>
                     </div>
 

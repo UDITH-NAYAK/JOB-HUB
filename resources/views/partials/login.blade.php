@@ -57,7 +57,7 @@
                             <label for="remember" class="ml-2 block text-sm text-gray-700">Remember me</label>
                         </div>
     
-                        <a href=" " class="text-sm text-indigo-600 hover:underline">
+                        <a href="/showforgot" class="text-sm text-indigo-600 hover:underline">
                             Forgot your password?
                         </a>
                     </div>

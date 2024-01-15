@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Sendmail;
 use App\Models\JobPost;
 
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
+ 
 
 class JobController extends Controller
 {
+   
+ 
     public function showPostPage()
     {
         return view('partials.UploadPost');
@@ -76,9 +81,10 @@ class JobController extends Controller
         ]);
 
         if (request()->hasFile('logo')) {
-            $formfields['logo'] = request()->file('logo')->store('/logos','s3');
+            $formfields['logo'] = request()->file('logo')->store('/logos','public');
             Storage::put('test.txt',"hello");
         }
+        
         // if (request()->hasFile('logo')) {
         //     $formfields['logo'] = request()->file('logo')->store('logos', 'public');
         //     //important: run this  php artisan storage:link to store files           
@@ -92,6 +98,9 @@ class JobController extends Controller
     public function delete(JobPost $job)
     {
         $job->delete();
-        return back()->with('message', 'Post Deleted Successyllu');
+        return back()->with('message', 'Post Deleted Successfully');
     }
+
+
+   
 }

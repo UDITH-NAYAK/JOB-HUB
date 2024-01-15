@@ -81,6 +81,7 @@
                     Description</label>
                 <textarea type="text" class="border border-gray-200 rounded p-1 w-full" placeholder="Enter description here"
                     name="description" value="{{ $job->description }}">
+                    {{ $job->description }}
                 </textarea>
 
                 @error('description')

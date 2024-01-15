@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ForgotPassController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\UserController;
@@ -18,8 +19,13 @@ use App\Http\Controllers\UserController;
 
 
 Route::get('/',[JobController::class,'showJobs']);
-// Route::get('/search',[JobController::class,'showSearch'])->middleware("guest");
 
+Route::get('/showforgot',[ForgotPassController::class,'showForgotPage']);
+Route::post('/passreset',[ForgotPassController::class,'passwordReset']);
+Route::get('/reset-password/{token}/{email}',[ForgotPassController::class,'show_reset_password']);
+Route::post('/rest-password-post',[ForgotPassController::class,'reset_password']);
+
+// Route::get('/search',[JobController::class,'showSearch'])->middleware("guest");
 Route::get('/manage',[JobController::class,'manage'])->middleware("auth");
 Route::get('/job/edit/{job}',[JobController::class,'showEditPage'])->middleware("auth");
 Route::get('/job/delete/{job}',[JobController::class,'delete'])->middleware("auth");
