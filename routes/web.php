@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\ForgotPassController;
+use App\Http\Livewire\ModelPredictor;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MlmodelController;
+use App\Http\Controllers\ForgotPassController;
  
 
 /*
@@ -20,6 +22,11 @@ use App\Http\Controllers\UserController;
 
 Route::get('/',[JobController::class,'showJobs']);
 
+Route::get('/model',[MlmodelController::class,'showMlForm']);
+Route::post('/predict',[MlmodelController::class,'predict']);
+ 
+
+//Password rest 
 Route::get('/showforgot',[ForgotPassController::class,'showForgotPage']);
 Route::post('/passreset',[ForgotPassController::class,'passwordReset']);
 Route::get('/reset-password/{token}/{email}',[ForgotPassController::class,'show_reset_password']);
