@@ -6,13 +6,13 @@
             Welcome back , <span class="font-bold text-xl">{{auth()->user()->name}}</span>
         </div>
         @endauth
-        <a href="/">
-            <div class="text-white font-bold text-xl">
-                <!-- <img src="images/newlogo.png" alt="image" class="rounded-lg w-20 h-10"> -->
+        <div class="text-white font-bold text-xl ">
+            <!-- <img src="images/newlogo.png" alt="image" class="rounded-lg w-20 h-10"> -->
+            <a href="/">
                 <i class="fa-solid fa-house"></i>
                 Home
+            </a>
             </div>
-        </a>
         
         @auth
 

@@ -7,13 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="font-sans bg-gradient-to-t from-purple-300  via-gray-200 to-purple-300">
+<body class="font-sans bg-gradient-to-r from-indigo-50 via-indigo-100 to-indigo-150">
     <x-navbar/>
 
     <!-- Content -->
     <div class="container mx-auto mt-20">
         <div class=" max-h-xl flex items-center justify-center ">
-            <div class="max-w-xl max-h-xl  w-full p-6 bg-white rounded-md shadow-md">
+            <div class="max-w-xl max-h-xl  w-full p-6 bg-white rounded-lg shadow-md">
                 <h1 class="text-4xl font-extrabold text-center text-indigo-600 mb-4">Welcome to JobPost</h1>
                 <p class="text-lg text-gray-600 text-center mb-8">Find the job that suits you!</p>
     
@@ -72,7 +72,7 @@
                 <div class="mt-6 text-center">
                     <p class="text-sm text-gray-700">
                         Don't have an account?
-                        <a href=" " class="text-indigo-600 hover:underline">Register here.</a>
+                        <a href="/register" class="text-indigo-600 hover:underline">Register here.</a>
                     </p>
                 </div>
             </div>

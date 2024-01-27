@@ -45,8 +45,7 @@ class JobController extends Controller
             $formfields['logo'] = request()->file('logo')->store('/logos','public');       
         }
 
-
-        // dd($request->file('logo')->store('logos','public'));
+ 
         JobPost::create($formfields);
         return redirect('/')->with('message', 'Post created..');
     }
@@ -54,7 +53,7 @@ class JobController extends Controller
     public function showJobs()
     {
         return view("index", ["jobs" => JobPost::latest()->filter(request('search'))->paginate(5)]);
-        // return view("index");
+         
     }
 
 

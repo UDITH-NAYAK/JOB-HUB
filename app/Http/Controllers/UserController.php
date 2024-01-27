@@ -40,7 +40,7 @@ class UserController extends Controller
         if(auth()->attempt($formfields))
         {
             request()->session()->regenerate();
-            // return redirect('/')->with('message','Login Successfull');
+            return redirect('/')->with('message','Login Successfull');
         }
 
         return back()->withErrors(['email'=>'Invalid email ot password']);

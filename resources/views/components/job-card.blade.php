@@ -3,7 +3,7 @@
     <div class="flex h-full  ">
         <div class="max-h-full   ">
    
-            <img src="{{ $job->logo ? asset('storage/' . $job->logo) : asset('public/images/default.jpg') }}" alt="logo"/>
+            <img src="{{ $job->logo ? asset('storage/' . $job->logo) : asset('public/images/default.jpg') }}" class="max-w-32" alt="logo"/>
 
             @auth
                 <a href="{{ $job->job_link }}" target="_blank" class="mr-0 b-0">

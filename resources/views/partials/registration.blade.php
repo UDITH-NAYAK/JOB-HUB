@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="font-sans bg-gradient-to-t from-purple-300  via-gray-200 to-purple-300">
+<body class="font-sans bg-gradient-to-r from-indigo-100 via-indigo-150 to-indigo-200">
     <x-navbar />
 
     <!-- Content -->

@@ -25,18 +25,23 @@
             </div>
         </form>
 
-        <div class="lg:grid lg:grid-cols-4 gap-4 mt-10 space-y-4 md:space-y-0 mx-4">
-            @if ($jobs->isEmpty())
-                <p>Search not found</p>
-                   
-            @else
+        @if ($jobs->isEmpty())
+            <div class="text-5xl text-center text-pink-500 pt-8">
+                Jobs not found
+                {{-- <i class="fa fa-exclamation-circle" aria-hidden="true"></i> --}}
+                <i class="fa-solid fa-exclamation"></i>
+                <i class="fa-solid fa-exclamation"></i>
+            </div>
+        @else
+            <div class="lg:grid lg:grid-cols-4 gap-4 mt-10 space-y-4 md:space-y-0 mx-4">
+
                 @foreach ($jobs as $job)
                     <x-job-card :job="$job" />
                 @endforeach
-                
-            @endif
 
-        </div>
+
+            </div>
+        @endif
         </div>
     </body>
     <footer>
