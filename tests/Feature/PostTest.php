@@ -45,7 +45,7 @@ class PostTest extends TestCase
         $user=$this->createUser();
         $jobs=JobPost::factory(10)->create();
         $lastjob=$jobs->last();
-            
+
         $response = $this->actingAs($user)->get('/');
         $response->assertViewHas('jobs',function($collection) use ($lastjob){
             return !$collection->contains($lastjob);
@@ -60,4 +60,5 @@ class PostTest extends TestCase
         $response->assertSee('Apply');
          
     }
+ 
 }

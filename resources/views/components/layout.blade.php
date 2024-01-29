@@ -33,6 +33,7 @@
 
     {{ $slot }}
     <x-alert />
+    <x-confirm-box/>
 </body>
 {{-- <footer>
     <footer

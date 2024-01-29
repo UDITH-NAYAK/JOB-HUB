@@ -1,4 +1,6 @@
 <x-layout>
+ 
+ 
     <div class="bg-gray-50 border border-gray-200 p-10 rounded">
         <header>
             <h1 class="text-3xl text-center font-bold my-6 uppercase">
@@ -21,15 +23,19 @@
                                         class="fa-solid fa-pen-to-square"></i>
                                     Edit</a>
                             </td>
-                            <td class="px-4 py-8 border-t border-b border-gray-300 text-lg">
-                                <form action="/job/delete/{{$item->id}}">
-                                 @method("DELETE")
-                                    <button class="text-red-600">
-                                        <i class="fa-solid fa-trash-can"></i>
-                                        Delete
-                                    </button>
-                                </form>
-                            </td>
+                                <td class="px-4 py-8 border-t border-b border-gray-300 text-lg">
+                                    <form method="POST" action='{{route('confirm-alert')}}'>
+                                        @csrf
+                                        
+                                        <input type="hidden" name="job_id" value="{{$item->id}}">
+                                        <button class="text-red-600"
+                                        type="submit">
+                                            <i class="fa-solid fa-trash-can"
+                                            ></i>
+                                            Delete
+                                        </button>
+                                    </form>
+                                </td>
                         </tr>
                     @endforeach
                 @else

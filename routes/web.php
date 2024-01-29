@@ -35,7 +35,8 @@ Route::post('/rest-password-post',[ForgotPassController::class,'reset_password']
 // Route::get('/search',[JobController::class,'showSearch'])->middleware("guest");
 Route::get('/manage',[JobController::class,'manage'])->middleware("auth");
 Route::get('/job/edit/{job}',[JobController::class,'showEditPage'])->middleware("auth");
-Route::get('/job/delete/{job}',[JobController::class,'delete'])->middleware("auth");
+Route::delete('/job/delete/{job}',[JobController::class,'delete'])->middleware("auth");
+Route::post('/job/delete/showPopup',[JobController::class,'showPopup'])->name('confirm-alert')->middleware("auth");
 
 
 Route::get('/job/post',[JobController::class,'showPostPage'])->middleware("auth");

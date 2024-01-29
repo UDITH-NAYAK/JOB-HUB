@@ -100,6 +100,14 @@ class JobController extends Controller
         return back()->with('message', 'Post Deleted Successfully');
     }
 
+    public function showPopup(){
+
+        // dd(request('confirm-message'));
+        $job_id=request('job_id');
+     
+        return back()->with(['job_id'=>$job_id,'confirm-message'=>true]);
+        // session();
+    }
 
    
 }
