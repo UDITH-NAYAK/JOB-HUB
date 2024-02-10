@@ -22,6 +22,7 @@ use App\Http\Controllers\ForgotPassController;
 
 Route::get('/',[JobController::class,'showJobs']);
 
+// Model  Prediction Page
 Route::get('/model',[MlmodelController::class,'showMlForm']);
 Route::post('/predict',[MlmodelController::class,'predict']);
  
@@ -48,7 +49,7 @@ Route::put('/job/update/{job}',[JobController::class,'updatePost'])->middleware(
 Route::get('/login', function () {return view('partials.login');})->name("login")->middleware('guest');
 Route::post('/user/authenticate',[UserController::class,'authenticate']);
 
-Route::get('/register', function () {return view('partials.registration');});
+Route::get('/register', function () {return view('partials.registration');})->name('register');
 Route::post('/create_user',[UserController::class,'register']);
 
 Route::post('/logout',[UserController::class,'logout']);

@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('app.name', 'JonPost') }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('JOB-HUB/resources/css/app.css') }}">
+ 
 </head>
 
-<body class="font-sans bg-gradient-to-r from-indigo-50 via-indigo-100 to-indigo-150">
+ 
+        
+<body class="font-sans login" style="background-image: url('{{ asset('images/newbackground.png') }}'); background-size: cover  ">
+    {{-- <img src="{{asset('images/background.jpg')}}" class="w-full h-screen absoulte"> --}}
     <x-navbar/>
 
     <!-- Content -->
-    <div class="container mx-auto mt-20">
+    <div class="container mx-auto mt-20 ml-52 ">
         <div class=" max-h-xl flex items-center justify-center ">
             <div class="max-w-xl max-h-xl  w-full p-6 bg-white rounded-lg shadow-md">
                 <h1 class="text-4xl font-extrabold text-center text-indigo-600 mb-4">Welcome to JobPost</h1>
@@ -51,19 +56,15 @@
                     @enderror
                     </div>
     
-                    <div class="flex items-center justify-between mb-4">
-                        <div class="flex items-center">
-                            <input type="checkbox" id="remember" name="remember" class="h-4 w-4 text-indigo-600">
-                            <label for="remember" class="ml-2 block text-sm text-gray-700">Remember me</label>
-                        </div>
-    
+                    <div class="flex items-center   mb-4">
+                
                         <a href="/showforgot" class="text-sm text-indigo-600 hover:underline">
                             Forgot your password?
                         </a>
                     </div>
     
                     <div>
-                        <button type="submit" class="w-full bg-indigo-600 text-white p-3 rounded-md focus:outline-none hover:bg-indigo-700">
+                        <button type="submit" class="w-full text-white bg-blue-500 hover:bg-blue-700 rounded-md  h-12">
                             Login
                         </button>
                     </div>

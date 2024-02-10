@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="font-sans bg-gradient-to-r from-indigo-100 via-indigo-150 to-indigo-200">
+<body class="font-sans "style="background-image: url('{{ asset('images/newbackground.png') }}'); background-size: cover ">
     <x-navbar />
 
     <!-- Content -->
@@ -68,7 +68,7 @@
 
                     <div>
                         <button type="submit"
-                            class="w-full bg-indigo-600 text-white p-3 rounded-md focus:outline-none hover:bg-indigo-700">
+                            class="w-full text-white bg-blue-500 hover:bg-blue-700 rounded-md  h-12">
                             Register
                         </button>
                     </div>
@@ -77,7 +77,7 @@
                 <div class="mt-6 text-center">
                     <p class="text-sm text-gray-700">
                         Don't have an account?
-                        <a href=" " class="text-indigo-600 hover:underline">Register here.</a>
+                        <a href="{{route('login')}}" class="text-indigo-600 hover:underline">Login</a>
                     </p>
                 </div>
             </div>

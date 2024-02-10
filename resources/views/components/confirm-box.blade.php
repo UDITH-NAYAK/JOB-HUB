@@ -46,7 +46,5 @@
         // });
     </script>
 </div>
-@else  @php
-    echo "not found"
-@endphp
+    
 @endif

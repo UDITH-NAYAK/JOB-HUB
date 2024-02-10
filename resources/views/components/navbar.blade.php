@@ -44,17 +44,22 @@
             </div>
         @else
             <div class="hidden md:flex items-center space-x-6">
+                @if (!request()->is('login'))
                 <div class="text-white">
                  
                     <a href="/login" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                         Login
                     </a>
                 </div>
+                @endif
+
+                @if(!request()->is('register'))
                 <div class="text-white">
                     <a href="/register" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                         Register
                     </a>
                 </div>
+                @endif
             </div>
 
         @endauth

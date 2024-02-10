@@ -1,5 +1,5 @@
 @props(['job'])
-<div class="bg-gray-100  border rounded-md max-h-full h-full max-w-54 overflow-show p-2">
+<div class="bg-white  border-2 rounded-md max-h-full h-full max-w-54 overflow-show p-2">
     <div class="flex h-full  ">
         <div class="max-h-full   ">
    
@@ -13,7 +13,7 @@
             @else
                 <a href="/login" target="_blank" class="mr-0 b-0 ">
                     <button
-                        class=" leading-tight bg-gradient-to-r from-indigo-300 to-blue-500 text-white foucus:ring  mt-2 w-lg pt-2 pl-4 pr-4 pb-2 rounded rounded:md">Login
+                        class=" leading-tight bg-blue-500 hover:bg-blue-700 text-white foucus:ring  mt-2 w-lg pt-2 pl-4 pr-4 pb-2 rounded rounded:md">Login
                         to apply</button>
                 </a>
             @endauth

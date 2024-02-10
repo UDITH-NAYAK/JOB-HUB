@@ -52,8 +52,11 @@ class JobController extends Controller
 
     public function showJobs()
     {
-        return view("index", ["jobs" => JobPost::latest()->filter(request('search'))->paginate(5)]);
-         
+        if(request('search')||request('filters'))
+            return view("index", ["jobs" => JobPost::filter(request('search'),request('filters'))->paginate(5)]);
+    
+        return view("index", ["jobs" => JobPost::latest()->paginate(5)]);
+        // return view("index");
     }
 
 

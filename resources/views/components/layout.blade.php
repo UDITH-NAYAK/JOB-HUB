@@ -19,17 +19,20 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        ghost:'f8f9fa'
                     }
                 }
             }
         }
     </script>
+ 
 </head>
 
 <x-navbar />
 
 
-<body class="bg-gradient-to-r from-gray-200 via-gray-200 to-gray-200  ">
+{{-- <body class="bg-gradient-to-r from-gray-200 via-gray-200 to-gray-200  "> --}}
+<body class="bg-ghost ">
 
     {{ $slot }}
     <x-alert />

@@ -43,7 +43,7 @@
                         <td class="px-4 py-8 border-t border-b border-gray-300 text-lg">
                             <p class="text-center">You have'nt Posted Yet</p>
                             <p class="text-center">Get start by Posting 
-                                <a href="/job/create" class="link underline c">Upload a post</a>
+                                <a href="/job/post" class="link underline c">Upload a post</a>
                              </p>
                         </td>
                     </tr>

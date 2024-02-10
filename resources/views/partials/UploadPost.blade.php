@@ -178,7 +178,7 @@
             </div>
 
             <div class="mb-6">
-                <button type="submit" class="bg-pink-500 p-2 rounded-lg w-20 ">Post</button>
+                <button type="submit" class="bg-blue-500 p-2 rounded-lg w-20 ">Post</button>
 
             </div>
         </form>

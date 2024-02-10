@@ -1,8 +1,8 @@
 <x-layout>
-    <body class="antialiased bg-slate-200">
+    <body class="antialiased bg-slate-300 ">
         <form action="/passreset" method="POST" class="my-10">
             @csrf
-        <div class="max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
+        <div class="max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-400">
             <h1 class="text-4xl font-medium">Reset password</h1>
             <p class="text-slate-500">Fill up the form to reset the password</p>
 
@@ -29,13 +29,13 @@
 
                     {{-- <form action="/passreset" class="my-10"> --}}
                         <button
-                            class="w-full py-3 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center">
+                            class="w-full py-3 font-medium text-white bg-blue-500 hover:bg-blue-600 rounded-lg border-blue-500 hover:shadow inline-flex space-x-2 items-center justify-center">
 
                             <span>Reset password</span>
                         </button>
                     </form>
                     <p class="text-center">Not registered yet? <a href="#"
-                            class="text-indigo-600 font-medium inline-flex space-x-1 items-center"><span>Register now
+                            class="text-blue-600 font-medium inline-flex space-x-1 items-center"><span>Register now
                             </span><span><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round"

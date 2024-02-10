@@ -43,7 +43,7 @@ class UserController extends Controller
             return redirect('/')->with('message','Login Successfull');
         }
 
-        return back()->withErrors(['email'=>'Invalid email ot password']);
+        return back()->withErrors(['email'=>'Invalid email or password']);
 
     }
 
